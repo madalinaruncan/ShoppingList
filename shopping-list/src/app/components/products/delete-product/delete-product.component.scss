@@ -1,0 +1,41 @@
+h2 {
+  text-align: center;
+  color: rgb(50, 122, 32);
+  font-style: italic;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+div {
+  text-align: center;
+  color: rgb(50, 122, 32);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ddd;
+  width: 30%;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #bef0af;
+  color: #062b0e;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-left: 2%;
+  margin-right: 1%;
+}
+
+button:hover {
+  background-color: #062b0e;
+  color: #bef0af;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}

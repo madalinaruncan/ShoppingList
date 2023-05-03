@@ -1,0 +1,35 @@
+<h2>My Shopping List</h2>
+
+<div class="products">
+  <p>
+    <a routerLink="/product/add">Add new products</a>
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price if bougth</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.bougthAtPrice }}</td>
+        <td>
+          <a routerLink="/product/detail/{{ product.id }}"
+            ><i class="fa fa-pencil" aria-hidden="true"></i
+          ></a>
+          <a routerLink="/product/delete/{{ product.id }}"
+            ><i class="fa fa-trash" aria-hidden="true"></i
+          ></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

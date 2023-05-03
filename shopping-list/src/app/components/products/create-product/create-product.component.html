@@ -1,0 +1,28 @@
+<div class="main" *ngIf="product">
+  <h2>Adding new product: {{ product.name }}</h2>
+  <div>
+    <label for="product-id">Product id: </label>
+    <input id="product-id" [(ngModel)]="product.id" placeholder="Enter product id" />
+
+    <label for="product-name">Product name: </label>
+    <input id="product-name" [(ngModel)]="product.name" placeholder="Enter product name" />
+
+    <label for="product-quantity">Product quantity: </label>
+    <input
+      id="product-quantity"
+      [(ngModel)]="product.quantity"
+      placeholder="Enter quantity"
+    />
+
+    <label for="product-bougthAtPrice">Bougth at price: </label>
+    <input
+      id="product-boughtAtPrice"
+      [(ngModel)]="product.bougthAtPrice"
+      placeholder="Enter price"
+    />
+  </div>
+
+  <button type="button" (click)="onAdd()">Add</button>
+
+  <button type="button" (click)="onBack()">Back</button>
+</div>

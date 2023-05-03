@@ -1,0 +1,8 @@
+<div class="main" *ngIf="id">
+  <h2>Are you sure?</h2>
+  <div>Really delete the product with id {{ id }} ?</div>
+
+  <button type="button" (click)="onConfirm()">Yes</button>
+
+  <button type="button" (click)="onCancel()">No</button>
+</div>

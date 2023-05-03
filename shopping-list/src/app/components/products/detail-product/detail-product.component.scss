@@ -1,0 +1,53 @@
+h2 {
+  color: rgb(50, 122, 32);
+  font-style: italic;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+div {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ddd;
+  width: 30%;
+}
+
+label,
+p {
+  color: rgb(50, 122, 32);
+  font-weight: bold;
+}
+
+input {
+  text-align: left;
+  width: 100%;
+  padding: 12px 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid rgb(50, 122, 32);
+  border-radius: 1px;
+}
+button {
+  margin-top: 20px;
+  background-color: #bef0af;
+  color: #062b0e;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-left:25%;
+  
+}
+
+button:hover {
+  background-color: #062b0e;
+  color: #bef0af
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}

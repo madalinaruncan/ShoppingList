@@ -1,0 +1,83 @@
+<div class="products">
+
+  <p>Welcome to Shopping List!</p>
+  <p> Manage your shopping list from product menu or see the reports down below.</p>
+<a (click)="toggleBoughtProducts()" (click)="getProducts()" (click)="showBoughtProducts()" id="button1">
+  {{report1}}
+</a>
+<a (click)="toggleProductsToBuy()" (click)="getProducts()" (click)="showProductsToBuy()" id="button2">
+  {{report2}}
+</a>
+<a (click)="toggleSortByPrice()" (click)="getProducts()" (click)="sortByPrice()" id="button3">
+  {{report3}}
+</a>
+
+<ng-container *ngIf="show">
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price if bougth</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.quantity }}</td>
+          <td>{{ product.bougthAtPrice }}</td>
+          <td>
+            <a routerLink="/product/detail/{{ product.id }}"
+              ><i class="fa fa-pencil" aria-hidden="true"></i
+            ></a>
+            <a routerLink="/product/delete/{{ product.id }}"
+              ><i class="fa fa-trash" aria-hidden="true"></i
+            ></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
+
+
+
+<ng-container *ngIf="sort">
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price if bougth</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.quantity }}</td>
+          <td *ngIf="product.bougthAtPrice !== undefined; else undefinedCase">{{ product.bougthAtPrice }} &nbsp; (total {{product.bougthAtPrice! * product.quantity!}})</td>
+          <ng-template #undefinedCase>
+            <div class="undefinedCase">not bougth yet</div>
+          </ng-template>
+          <td>
+            <a routerLink="/product/detail/{{ product.id }}"
+              ><i class="fa fa-pencil" aria-hidden="true"></i
+            ></a>
+            <a routerLink="/product/delete/{{ product.id }}"
+              ><i class="fa fa-trash" aria-hidden="true"></i
+            ></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
+</div>

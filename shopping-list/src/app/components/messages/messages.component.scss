@@ -1,0 +1,32 @@
+h2 {
+  color: rgb(50, 122, 32);
+  font-style: italic;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.main {
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+button {
+  background-color: #bef0af;
+  color: #062b0e;
+  padding: 0.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1%;
+}
+
+button:hover {
+  color: #bef0af;
+  background-color: #062b0e;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
